@@ -1,0 +1,239 @@
+/* Reset some default styles */
+/* Reset some default styles */
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply background image */
+body {
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Fixed background while scrolling */
+    background-position: center; /* Center the background image */
+    font-family: Arial, sans-serif; /* Specify a default font family */
+    color: #fff; /* Set text color to white for readability */
+}
+
+/* Header styles */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for header */
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #fff; /* Set header text color */
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Welcome section styles */
+#welcome-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for welcome section */
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-message h2 {
+    font-size: 24px;
+}
+
+.welcome-message p {
+    font-size: 18px;
+}
+
+/* Moving buses section styles */
+#moving-buses {
+    position: relative; /* Establish a positioning context for absolute positioning */
+    margin-top: 20px;
+}
+
+.road {
+    background-color: #888; /* Gray color for the road */
+    height: 50px;
+    width: 100%;
+}
+
+.bus {
+    background-color: #FF5733; /* Orange color for buses */
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    top: 10px; /* Adjust this value to position the buses on the road */
+    transition: left 2s ease-in-out;
+}
+
+.bus1 {
+    left: -100px; /* Start the first bus off the screen to the left */
+}
+
+.bus2 {
+    left: -200px; /* Start the second bus off the screen to the left */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FF5733; /* Change link color on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for footer */
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff; /* Set footer text color */
+}
+
+
+@keyframes moveBus {
+    0% {
+        left: -100px; /* Starting position off-screen */
+        transform: scaleX(1);
+    }
+    100% {
+        left: calc(100% + 100px); /* Ending position off-screen */
+        transform: scaleX(-1); /* Flips the bus */
+    }
+}
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Radio button and checkbox styling */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+/* Error messages */
+.invalid-feedback {
+    color: red;
+    font-size: 14px;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar a.nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
